@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.db import transaction
 from rest_framework import serializers
 from .models import MainUser, Company, Vacancy
@@ -24,3 +25,15 @@ class VacancySerializer(serializers.ModelSerializer):
         if value > 0:
             raise serializers.ValidationError('invalid salary')
         return value
+=======
+from rest_framework import serializers
+
+
+class ApplicationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Application
+        # fields = ('size', 'type')
+        fields = '__all__'
+
+>>>>>>> c74bb7cec00ffc77b5d1de59627e3954c101dc5b
