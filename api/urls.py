@@ -1,8 +1,8 @@
 from rest_framework import routers
 
-from api.views import ApplicationViewSet
+from api.views import VacancyViewSet
 
 router = routers.DefaultRouter()
-router.register('products', ApplicationViewSet, base_name='core')
+router.register('products', VacancyViewSet, base_name='core')
 
 urlpatterns = router.urls

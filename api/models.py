@@ -27,7 +27,7 @@ class Profile(models.Model):
 class Vacancy(models.Model):
     name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now=True)
-    created_by = models.ForeignKey(Company, on_delete=models.CASCADE, null=True, related_name='company')
+    created_by = models.ForeignKey('Company', on_delete=models.CASCADE, null=True, related_name='company')
     description = models.TextField
     salary = models.IntegerField
     candidates = models.ManyToManyField(MainUser)
